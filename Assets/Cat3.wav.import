@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Cat3.wav-fceb6e2feb838784c0da31376ec35dda.sample"
+
+[deps]
+
+source_file="res://Assets/Cat3.wav"
+dest_files=[ "res://.import/Cat3.wav-fceb6e2feb838784c0da31376ec35dda.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

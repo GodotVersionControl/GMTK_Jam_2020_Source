@@ -1,0 +1,697 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# twibbon: http://ogp.me/ns/fb/twibbon#">
+    <meta charset="utf-8" />
+
+    <title>Happy Birthday Louis - Support Campaign on Twitter | Twibbon</title>
+    <meta name="description" content="Support Happy Birthday Louis Campaign on Twibbon via Twitter - Celebrating Louis Tomlinsons 24th birthday " />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-site-verification" content="Tk7R2tP_6p5KVawPh_AFUXMhv_jpbhyC5UJvB9kciHQ" />
+    <meta property="twitter:account_id" content="4503599627804239" />
+    <script src="/Scripts/jquery.js?v=OSrmRIQnrXdoTEYncenq3Wl33T4ukuvHnIi5CsemjVI1"></script>
+
+    <script src="/Scripts/projectCommon.js?v=t4-RasKuXvdpeRoi0oI80NjFovt81N0LpS5povh615U1"></script>
+
+    <link href="/Styles/common.css?v=rzsK56_i3iIkTEw2O2DbJ78sdHvcoYIi6ysblWRmvzA1" rel="stylesheet"/>
+
+
+    <meta name="referrer" content="origin" />
+
+    <script type="text/javascript" src="https://use.typekit.com/cej4wfo.js"></script>
+
+    <script type="text/javascript"> try { Typekit.load(); } catch (e) { }</script>
+
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/Content/images/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="/Content/images/apple-touch-icon.png" />
+    <meta property="fb:app_id" content="251526681867858" />
+
+
+<meta property="og:type" content="website" />
+    <meta property="og:url" content="https://twibbon.com/support/happy-birthday-louis-2" />
+    <link rel="canonical" href="https://twibbon.com/support/happy-birthday-louis-2" />
+
+<meta property="og:title" content="Happy Birthday Louis" />
+<meta property="og:description" content="Celebrating Louis Tomlinsons 24th birthday " />
+<meta property="og:image" content="https://twibbon.blob.core.windows.net/twibbon/2015/334/7912fb5d-b64c-4ed4-b3e8-9977bc0f764a.png" />
+<meta property="og:site_name" content="Twibbon" />
+    
+    <link href="/Styles/desktop.css?v=4PhHJNtMmASfeULrs-7jvj-Vi6W6xeuvto6BAkLWNK01" rel="stylesheet"/>
+
+    
+    
+    
+    <script src="/Content/Javascript/jQuery/jquery-ui-1.10.4.js" type="text/javascript"></script>
+    <link href="/Content/Css/jquery-ui.css" rel="stylesheet" type="text/css" />
+
+    <script src="/Scripts/fileupload.js?v=BNCLHrjeiofuwPQExmYgVc7RUq4fnl-B1smOzHM7lpE1"></script>
+
+    <script src="/Scripts/cause.js?v=8fFOyggf0QSEnJUWg1ZWz7mBnRb_Jt6r0oo96tTQyXY1"></script>
+
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            
+            var currentAction = "";
+            var analyticsLabel = "happy-birthday-louis-2";
+            
+            MW.onSuccessCallback(function () {
+                //record join - use action from modal
+                tracking.track("Support", currentAction + "Support", analyticsLabel);
+            });
+            
+            $(".btn-analytics").click(function () {
+                var action = $(this).attr("data-analytics");
+                tracking.track("Support", action, analyticsLabel);
+            });
+            
+            $(".modal").bind("show.bs.modal", function () {
+                MW.setPrefix("#" + $(this).attr("id")); //bind modal windows - set prefixes on modal window js
+                //bind analaytics
+                currentAction = $(this).attr("data-analytics");
+                tracking.track("Support", currentAction + "Modal", analyticsLabel);
+            });
+
+            ST.init("#twitter-status", "https://twibbon.com/support/happy-birthday-louis-2/twitter", "Please help support Happy Birthday Louis, add a #Twibbon now! https://twibbon.com/support/happy-birthday-louis-2/twitter", 139);
+            
+            //spin off modals when button only post
+            $(".tweet-form").bind("submit", function() {
+                $("#twitter-tweet-modal").modal("show");
+            });
+                                    
+            TWSource.init("#modal-twitter", "/resources/profileimage/twitter/profile.jpg", "#twitter-image-url", "twitter");
+            $("#modal-twitter").bind("show.bs.modal", function () {                
+                TWSource.show();
+                OverlayPositioning.init(".twitter-positioning-container", "#twitter-profile", "#twitter-overlay", "/resources/profileimage/twitter/profile.jpg", "https://twibbon.blob.core.windows.net/twibbon/2015/334/935548c1-c6c7-455f-a09b-f6f3cc7a5778.png");
+                WebCamListener.setSourceSelect(TWSource);
+            });
+            
+                PermissionHandler.init("Twitter", ".btn-modal-twitter", "", function () { $("#modal-twitter").modal("show"); }, undefined, "XSzzGWw5ofRLHXrq3nF843EBULmtLsK-wq6HHHE8TDVSgDpeEYsEUcVjm4vs2IWJUd9XwXpuDkkLsohLsZmI-Hki0gUazCCpEJu3GMhETsI1:DmzSuumb-CbgNWdMtRUuuNStf2YWXq8aATA6a3IdWldfedZfQxMqVFL8DTvV3VdxwwmjaYlXw_HM5lFblJeztXLpWXELIc0SAk7OvHi7LVE1");
+                PermissionHandler.init("Twitter", ".btn-status-twitter", "", function () { $(".tweet-form").submit(); }, undefined, "GGIyZFmA-6rYC283-X1laaub-HY2diZ_TdNThDDKN7V7h-OSh9j5URTlvuSj5_iYGIfAmfCFzA55ne3E-Q3-g0SzV_E3sTdm9Eh974lJ0ME1:-_MTwrfo015K1-JXQNpvHpJM7V5z4dOyuhpSnUWnufrBqjBlX5zhcVCCwEw0TCF5ji5sGPw-HTM4u1lDoqX-sjqU08xIwtgjbhOfFIDNgp81"); 
+        });
+    </script>
+    
+
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="@twibbon"/>
+
+
+    <!-- D:\home\site\wwwroot\ -->
+</head>
+<body class="cause-page">
+
+    
+
+<div class="wrap">
+    <div class="navbar navbar-fixed-top" data-scrollspy="scrollspy">
+        <header class="twibbon-bar ">
+            <div class="container">
+                <nav class="logo">
+                    <a href="/">Twibbon</a>
+                </nav>
+                <nav class="tertiary-nav">
+                    <ul>                  
+                        <li class="start-link"><a class="btn btn-primary" href="/Discover">Find a Campaign</a></li>                       
+                        <li class="start-campaign"><a class="btn btn-primary" href="/Create">Start a Campaign</a></li>                               
+                        <li>    <a class="btn btn-primary btn-login-buttons" data-toggle="modal" href="#login-buttons">Login</a>
+</li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+            <div class="navbar-inner">
+        <div class="container">
+            <div class="row">
+                <nav class="campaign col-xs-8">
+                    <ul>
+                        <li class="home"><a href="/Discover">Home</a></li>
+                        <li class=""><a href="/causes">causes</a></li>
+                        <li class=""><a href="/entertainment">entertainment</a></li>
+                        <li class=""><a href="/technology">technology</a></li>
+                        <li class=""><a href="/sport">sport</a></li>
+                        <li class=""><a href="/lifestyle">lifestyle</a></li>
+                        <li class=""><a href="/other">other</a></li>
+                    </ul>
+                </nav>
+                <div class="col-xs-4">
+<form action="/Search" class="form-inline navbar-search pull-right" method="get">
+                        <input type="text" class="search-query" placeholder="" id="SearchTerm" name="SearchTerm">
+                        <input type="submit" class="search-submit" />
+</form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    
+    
+
+    <div class="container main-container">
+        
+
+
+
+        
+
+
+
+
+
+        <div class="alert alert-warning text-center" style="margin-top: -25px">
+            <a href="/create">Want your own Twibbon campaign? Get started now!</a>
+        </div>
+
+
+<div class="page-header">
+    <h1><span>Happy Birthday Louis</span></h1>
+</div>
+
+<div class="row clearfix cause-menu">
+    <div class="col-md-12">
+        <div class="menu-wrapper">
+        <nav class="cause-navigation">
+            <ul>
+                <li class=" microsite-support"><a href="https://twibbon.com/support/happy-birthday-louis-2"><i class="icon-thumbs-up"></i> Support</a></li>
+                <li class=" microsite-discuss"><a href="https://twibbon.com/support/happy-birthday-louis-2/discuss"> <i class="icon-comment-alt"></i>  Discuss</a></li>
+            </ul>
+        </nav>
+            </div>
+        </div>
+</div>
+
+
+
+<div class="row">
+    <div class="col-md-8">
+        <div class="island">
+            <header>
+                <h2>How would you like to support this Campaign on Twitter?</h2>
+            </header>
+            <div class="island-content group">
+                    <div class="support-row support-twibbon group">
+        <header>
+            <h2><span>Add a Twibbon to my profile picture</span> <a class="contextual-help" data-content="A Twibbon is a small image that we overlay onto your Facebook or Twitter profile picture to show your support." data-trigger="hover" rel="popover" title="Add a Twibbon">?</a></h2>
+        </header>
+        <div class="support-row-content">
+            <div class="display-twibbon-row group">
+                <div class="twibbon-equation">
+                    <div class="row no-margin">
+                        <div class="col-xs-3 first">
+                            <div class="equation-image-holder">
+                                <img src="/Content/Images/public/examples/girl.png" class="img-responsive girl" />
+                            </div>
+                        </div>
+                        <div class="col-xs-1">
+                            <div class="equation-operator-holder">
+                                <span class="twibbon-operator">+</span>
+                            </div>
+                        </div>
+                        <div class="col-xs-3">
+                            <div class="equation-image-holder">
+                                <img src="https://twibbon.blob.core.windows.net/twibbon/2015/334/935548c1-c6c7-455f-a09b-f6f3cc7a5778.png" class="img-responsive twibbon" />
+                            </div>
+                        </div>
+                        <div class="col-xs-1">
+                            <div class="equation-operator-holder">
+                                <span class="twibbon-operator">=</span>
+                            </div>
+                        </div>
+                        <div class="col-xs-3">
+                            <div class="equation-image-holder">
+                                <img src="/Content/Images/public/examples/girl.png" class="img-responsive girl" />
+                                <img src="https://twibbon.blob.core.windows.net/twibbon/2015/334/935548c1-c6c7-455f-a09b-f6f3cc7a5778.png" class="img-responsive twibbon" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden-lg hidden-md hidden-sm">
+                Celebrating Louis Tomlinsons 24th birthday 
+            </div>
+            <div class="button-row group">
+    <a class="btn btn-primary btn-other btn-analytics btn-modal-twitter btn-large btn-primary btn-support" data-toggle="modal" data-analytics="TwitterClick" href="#modal-twitter">        <span></span>
+ Show my Support Now!</a>   
+
+<div id="modal-twitter" class="modal" data-analytics="Twitter">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a href="#" class="close" data-dismiss="modal">&times;</a>
+                <h3>Add a Twibbon to Twitter</h3>
+            </div>
+
+            <div class="modal-body group no-padding">
+<div class="modal-intro">
+        <!-- second stage (hidden) -->
+<div class="source-placeholder">    
+    <ul class="source-buttons">
+        <h3>Select Source</h3>    
+        <li><a href="#" class="source-profile btn btn-primary"><i class="icon-user"></i> Profile</a></li>
+        <li><a href="#" class="source-facebook btn btn-primary"><i class="icon-facebook-sign"></i> Facebook</a></li>
+        <li><a href="#" class="source-webcam btn btn-primary"><i class="icon-facetime-video"></i> Webcam</a></li>
+        <li><a href="#" class="source-my-computer btn btn-primary"><i class="icon-upload"></i> Upload</a></li>
+        <div id="upload-twibbon-help" class="manage-alert small-alert">
+            <div class="alert-content">
+                <p>Use the options above to select the image you would like to add the Twibbon to.</p>
+            </div>                           
+        </div>
+    </ul>
+    <div class="source-panels">  
+        <div class="source-panel source-panel-profile">
+            <h3>Current profile picture</h3>
+            <div class="modal-twibbon-preview">
+                <img src="" class="profile-image-select-preview"/>
+            </div>
+            <div class="button-group">
+                <a class="btn btn-primary select-profile-image"><i class=" icon-ok-sign"></i> Use this image</a>
+            </div>
+        </div>
+        <div class="source-panel source-panel-loading source-panel">                     
+            <h3>Loading</h3>         
+        </div>
+        <div class="source-panel-albums source-panel">
+         <h3>Select from your Facebook photos</h3>               
+            <label>Select album:</label>
+            <select class="source-facebook-albums form-control"><option value=''>Profile</option></select>
+            <div class="source-facebook-images">                
+            </div>        
+        </div>
+        <div class="source-panel-webcam source-panel">            
+        
+                <div class="source-web-cam-placement" id="d8001fe0-3325-46ad-8337-fab07b2856e0"></div>
+        </div>
+        <div class="source-panel-upload source-panel">            
+            <h3>Upload from your computer</h3> 
+            <input class="file-upload-input" type="file" name="files[]">
+        </div>
+    </div>
+</div>
+    
+    <div class="add-twibbon">
+<form action="/Api/Support/TwitterOverlay/happy-birthday-louis-2" data-ajax="true" data-ajax-begin="MW.begin" data-ajax-failure="MW.failure" data-ajax-method="Post" data-ajax-success="MW.success" id="form0" method="post"><input name="__RequestVerificationToken" type="hidden" value="nOsTXzBoGSQBHUdxYzwS8bpaQhkU8kh6M0dtZKVHAg-Yl3-Wn7WtJGQSPJDr1IF5u_Jmk7PVcHIbgZO-i4rcUI_kTIjY0isjllo5fGxEyFY1" />            <div class="positioning-form">               
+                <div class="positioning-container twitter-positioning-container">
+                    <div class="positioning-info"></div>
+                    <img src="" alt="Twitter Profile" id="twitter-profile" class="image-preview"  />
+                    <div id="twitter-overlay">
+                        <img src="" alt="Happy Birthday Louis" width="100%" height="100%" />
+                    </div>
+<input class="ForegroundOffsetLeft" id="twitter-ForegroundOffsetLeft" name="ForegroundOffsetLeft" type="hidden" value="0" />
+<input class="ForegroundOffsetTop" id="twitter-ForegroundOffsetTop" name="ForegroundOffsetTop" type="hidden" value="0" />
+<input class="ForegroundOffsetWidth" id="twitter-ForegroundOffsetWidth" name="ForegroundOffsetWidth" type="hidden" value="0" />
+<input class="ForegroundOffsetHeight" id="twitter-ForegroundOffsetHeight" name="ForegroundOffsetHeight" type="hidden" value="0" />
+                    <div class="positioning-cta">
+                        <a href="#" class="btn btn-primary select-source" title="Select a different image to add the Twibbon to"><i class="icon-picture"></i> Change Image</a>
+                        <a href="#" class="btn btn-primary reset" title="Reset"><i class=" icon-undo"></i> &nbsp;</a>
+                    </div>
+                </div>
+                <input id="twitter-image-url" name="ImageUrl" type="hidden" value="/resources/profileimage/twitter/profile.jpg" />
+            </div>
+            <div class="twibbon-info">
+                <div class="modal-inner-content island-content">                    
+                    <p class="preamble">Show your support by adding a Twibbon to your Twitter profile picture.</p>
+                    <div><input class="btn btn-primary btn-support btn-add-twitter btn-analytics" data-analytics="TwitterAddClick" disabled="disabled" id="Add_the_Twibbon_to_Twitter" name="Add_the_Twibbon_to_Twitter" type="submit" value="Add the Twibbon to Twitter" /></div>             
+                    <div class="twibbon-notice">
+                        <p>When you click 'Add Twibbon to Twitter' your profile picture will be overlaid with the Twibbon and a support Tweet will be posted on your behalf saying: </p>
+                        <p><em>Please help support Happy Birthday Louis, add a #Twibbon now! https://twibbon.com/support/happy-birthday-louis-2/twitter</em></p>
+                        <p>We’ll also have you follow <a href="http://twitter.com/twibbon" target="_blank">@twibbon</a>. You can always unfollow them if you want.</p>   
+                    </div>  
+                </div>
+                       
+            </div>
+</form>    </div>
+
+</div>
+<div class="modal-waiting">    
+    <div class="modal-inner-content island-content">
+        <h2 class="loading">Adding your Twibbon</h2>
+        <p>We're currently adding the Twibbon to your Twitter profile picture. This will only take a few seconds...</p>
+        <div class="modal-promote">
+    <p>In the meantime please like us on Facebook!</p>
+    <iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Ftwibbonapp&amp;send=false&amp;layout=standard&amp;width=450&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font&amp;height=80&amp;appId=251526681867858" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:80px;" allowTransparency="true"></iframe>
+</div>
+    </div>
+</div>
+<div class="modal-failure">
+    
+</div>
+<div class="modal-success">
+    
+</div>
+
+<script class="modal-success-template" type="text/x-jsrender">
+    <div class="modal-inner-content island-content modal-success">
+        <div class="twibbon-preview modal-left-col">
+            <img src="{{:CombinedImageUrl}}" alt="Resulting image" class="img-responsive" />
+        </div>
+        <div class="twibbon-instructions modal-right-col">
+            <h2>Your Twibbon has been added!</h2>
+            <p>{{:Message}}</p>
+            <p>Note: If your profile image hasn't updated please be patient, sometimes it takes Twitter a little while to catch up.</p>
+            <p>Don't forget you can show support for this Campaign in other ways too.</p>
+            <div>
+                <a class="btn btn-primary" href="http://twitter.com/" target="_blank"><i class="icon-twitter"> </i> View on Twitter</a>
+            </div>
+
+        </div>
+    </div>
+</script>
+<script class="modal-failure-template" type="text/x-jsrender">
+    <div class="modal-inner-content island-content">
+        <h2>Oops, there was a problem!</h2>
+        <p>{{:Message}}</p>
+        
+<div class="">
+    <p>If the issue persists, our support team is here to help:</p>
+    <ul class="feature-list dotted-list">
+        <li><i class="icon-envelope"> </i> <a href="mailto:support@twibbon.com">support@twibbon.com</a></li>
+        <li><i class="icon-twitter"> </i>  <a href="http://twitter.com/twibbonsupport">@twibbonsupport</a></li>
+    </ul>
+</div>
+    </div>
+</script>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+                <div class="twibbon-add-info">
+                    <p><strong>Don't worry</strong>, you'll get a chance to preview your Twibbon before it is added.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+                
+                <div class="support-row support-tweet">
+    <header><h2><span><i class=" icon-twitter"> </i>Tweet my support on Twitter</span> <a class="contextual-help" data-content="Send a tweet of support from your Twitter account." data-trigger="hover" rel="popover" title="Tweet">?</a></h2></header>
+    <div class="support-row-content">
+<form action="/Api/Support/TwitterStatus/happy-birthday-louis-2" class="tweet-form form-horizontal no-margin" data-ajax="true" data-ajax-begin="MW.begin" data-ajax-failure="MW.failure" data-ajax-method="Post" data-ajax-success="MW.success" id="form1" method="post"><input name="__RequestVerificationToken" type="hidden" value="u7KXBRY5WTnUWXlRctBEtKlBrt8Q55xKR0fHDx8nlOjbGtAPk66epeAxSb4gfTkQLpHEEKwg5cJTFBt8DQWGrpBmqnEh-_9_vDjsh_uDnsg1" />            <fieldset class="control-group">
+                <div class="controls">
+                    <textarea class="input-xxlarge" id="twitter-status" name="Text" rows="3"></textarea>
+                    
+                </div>
+                <div class="button-row" style="padding-bottom: 0px; padding-left: 0px;">
+                    <div class="twibbon-add-info">
+                        <label for="AutoFollow">
+                            <input id="AutoFollow" name="AutoFollow" type="checkbox" value="True" /><input id="AutoFollow_Hidden" name="AutoFollow" type="hidden" value="false" />
+                            Follow @twibbon
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+<input class="btn btn-primary btn-status-twitter btn-analytics" data-analytics="TweetClick" id="Tweet" name="Tweet" type="submit" value="Tweet" /></form>    </div>
+</div>
+
+<div id="twitter-tweet-modal" class="modal" data-analytics="Tweet">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a href="#" class="close" data-dismiss="modal">&times;</a>
+                <h3>Tweet my support on Twitter</h3>
+            </div>
+
+            <div class="modal-body group no-padding">
+<div class="modal-waiting">    
+    <div class="modal-inner-content modal-padding">
+        <h2 class="loading">Tweeting your message of support. This should only take a few seconds...</h2>
+        <div class="modal-promote">
+    <p>In the meantime please like us on Facebook!</p>
+    <iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Ftwibbonapp&amp;send=false&amp;layout=standard&amp;width=450&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font&amp;height=80&amp;appId=251526681867858" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:80px;" allowTransparency="true"></iframe>
+</div>
+    </div>
+</div>
+<div class="modal-failure">
+    
+</div>
+<div class="modal-success">
+    
+</div>
+
+<script class="modal-success-template" type="text/x-jsrender">
+    <div class="modal-inner-content modal-padding">
+        <h2>You have tweeted your support!</h2>
+        <p>{{:Message}}</p>
+    </div>
+</script>
+
+<script class="modal-failure-template" type="text/x-jsrender">
+    <div class="modal-inner-content modal-padding">
+        <h2>Oops, something went wrong!</h2>
+        <p>{{:Message}}</p>
+        
+<div class="">
+    <p>If the issue persists, our support team is here to help:</p>
+    <ul class="feature-list dotted-list">
+        <li><i class="icon-envelope"> </i> <a href="mailto:support@twibbon.com">support@twibbon.com</a></li>
+        <li><i class="icon-twitter"> </i>  <a href="http://twitter.com/twibbonsupport">@twibbonsupport</a></li>
+    </ul>
+</div>
+    </div>
+</script>
+            </div>
+        </div>
+    </div>
+</div>
+
+                
+                
+                <a href="https://twibbon.com/support/happy-birthday-louis-2" class="btn-large btn-primary" style="margin: 0px auto;">More ways to show Support</a>
+            </div>
+        </div>        
+    </div>
+    <div class="col-md-4 side">
+        
+
+<div class="island group">
+    <header><h2 class="header-share">Campaign Details</h2></header>
+    <div class="island-content group">               
+        <div class="campaign-information">
+                <h3>by 91smarvel <span>awhile ago</span></h3>
+            <div class="cause-description">
+                 <p>Celebrating Louis Tomlinsons 24th birthday  </p>
+    <div id="description-modal" class="modal fade" data-analytics="Description">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <a href="#" class="close" data-dismiss="modal">&times;</a>
+                    <h3>Happy Birthday Louis Campaign Description</h3>
+                </div>
+                <div class="modal-body">
+                    Celebrating Louis Tomlinsons 24th birthday 
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn" data-dismiss="modal">Close</a>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+            </div>                  
+        </div>               
+        <div class="cause-stats">
+            <div class="stats stats-supporters">
+                <h4>0</h4>
+                <span>supports</span>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="island group">
+    <header><h2 class="header-share">Share this Campaign</h2></header>
+    <div class="island-content group">
+        <div class="share-group">
+            <div class="fb-share">
+              <div class="fb-like" data-href="http://twibbon.com/support/happy-birthday-louis-2" data-send="false" data-layout="box_count" data-width="60" data-show-faces="false"></div>
+            </div>
+            <div class="twitter-share">
+                <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://twibbon.com/support/happy-birthday-louis-2/twitter" data-text="Please help support Happy Birthday Louis, add a #Twibbon now!" data-count="vertical">Tweet</a>
+            </div>
+            <div class="google-share">
+                <div class="g-plusone" data-size="tall" data-href="https://twibbon.com/support/happy-birthday-louis-2"></div>
+            </div>            
+        </div>
+        <div class="cause-url">
+            https://twibbon.com/support/happy-birthday-louis-2
+        </div>
+    </div>
+</div>        
+        
+    </div>
+</div>
+
+         <div class="push"></div>
+    </div>
+ </div>
+<footer id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-8">
+                <ul>
+                    <li><a href="/About">About Us</a></li>
+                    <li><a href="http://blog.twibbon.com">Blog</a></li>
+                    <li><a href="/Help">Help</a></li>
+                    <li><a href="/Terms">Terms</a></li>
+                    <li><a href="/Privacy">Privacy</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-4">
+                <ul class="social">
+                    <li><a href="http://twitter.com/twibbon/"><i class="icon-footer-twitter"></i></a></li>
+                    <li><a href="http://www.facebook.com/twibbonapp"><i class="icon-footer-facebook"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<div id="login-buttons" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a href="#" class="close" data-dismiss="modal">&times;</a>
+                <h3>Login</h3>
+            </div>
+
+            <div class="modal-body group">
+                <div class="modal-inner-content" style="float:none;">
+                    <div class="bubble">
+                        <h2>You can login to Twibbon using Facebook or Twitter</h2>
+                    </div>
+
+                    <div class="row no-margin">
+                        <div class="col-md-12">
+                            <div class="button-group-modal">
+                                <a href="#" id="fbLogin" class="btn btn-large btn-primary btn-facebook"><i class="icon-facebook-sign"></i>Log in with Facebook</a>
+                                <a href="#" id="twLogin" class="btn btn-large btn-primary btn-twitter"><i class="icon-twitter-sign"></i>Log in with Twitter</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div id="fb-root"></div>
+<script>
+    var grantedPermissions = [];
+</script>
+<script>
+    // Load the SDK Asynchronously
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) { return; }
+        js = d.createElement(s); js.id = id;
+        js.src = "https://connect.facebook.com/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId: '251526681867858', // App ID
+            status: true, // check login status
+            cookie: true, // enable cookies to allow the server to access the session
+            xfbml: true,  // parse XFBML
+            version: 'v2.3'
+        });
+
+        FB.getLoginStatus(function (response) {
+            if (response.status === "connected") {
+                window.isConnected = true;
+                $.ajax({
+                    url: '/api/facebook/permissions',
+                    async: true,
+                    cache: false,
+                    type: 'POST',
+                    timeout: 60000
+                }).then(function (permsResponse) {
+                    if (permsResponse.Item && permsResponse.Item.Data) {
+                        var perms = permsResponse.Item.Data;
+                        for (var i = 0; i < perms.length; i++) {
+                            var currentPermission = perms[i];
+                            if (currentPermission.Status === 0) {
+                                window.grantedPermissions.push(currentPermission.Permission);
+                            }
+                        }
+                    }
+                });
+            } else {
+                window.isConnected = false;
+            }
+        });
+    };
+
+    function ShareDialog(prompt, title, caption, description, link, imageLink, actionText, actionLink) {
+        FB.ui(
+            {
+                method: 'stream.publish',
+                message: '',
+                attachment: {
+                    name: title,
+                    caption: caption,
+                    description: (description),
+                    href: link,
+                    media: [{ 'type': 'image', 'src': imageLink, 'href': link}]
+                },
+                action_links: [{ text: actionText, href: actionLink}],
+                user_message_prompt: prompt
+            },
+            function (response) {
+                if (response && response.post_id) {
+                    //alert('Post was published.');
+                } else {
+                    //alert('Post was not published.');
+                }
+            }
+        );
+    };
+
+    function ShareUrl(url) {
+        FB.ui({
+            method: 'share',
+            href: url
+        });
+    }
+
+</script>
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            PermissionHandler.init("Facebook", "#fbLogin", "public_profile", undefined, undefined, "HBf4IICndbrr54iGvgoAXqjcMlz_PChePjBhh-FXXUmwXzp8neL0jF8uwwJJuKGhkX6Dz46pdbClzPv38zzHjWDox0xnyGoJTLL1k6Gcm2Q1:iWlM1TBACR1HEPaKaf6-BBwQfK1DB1SBh7PK-GrSnVqDo3qC9JsYazDSE4_XETGiFx4OaIpvt8QNtkPGMDseNqI6tsPgIqARwmbH8elMYv81");
+            PermissionHandler.init("Twitter", "#twLogin", "", undefined, undefined, "zIYZxuTsip8R9dIEP-RO0ONR9B4dWtHW6KprInKm5MdZDtcYj6Efv5iP8xZBH8NPdnWDir4BSYM4e5TyLs3N2V_B56ngxwyUjh7nCR0AoA01:7iD0Jo5mEW20vfwQtZJ0w9icRTA8l0NkOR2EqeljqPbBoW65i0SjAzhc6erDExtrQ1ocLMYj_eHAmh-HRCURD5kpUxaENKYwAEg1G4IOtSw1");
+            
+            
+
+        });
+    </script>
+    
+    <script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>
+    <script type="text/javascript">
+        (function () {
+            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+            po.src = 'https://apis.google.com/js/plusone.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+        })();
+    </script>
+
+
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-3105495-10']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>

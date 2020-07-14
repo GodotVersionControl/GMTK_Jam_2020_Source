@@ -1,0 +1,91 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Assets/Computer/computer1.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Computer/Computer4.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Computer/Computer6.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Computer/Compuetr5.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Computer/Computer8.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Computer/Computer_sad.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Computer/Computer2.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Computer/computer3.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Computer/Computer7.png" type="Texture" id=9]
+
+[sub_resource type="PhysicsMaterial" id=1]
+friction = 0.5
+bounce = 0.05
+
+[sub_resource type="GDScript" id=5]
+script/source = "extends RigidBody2D
+
+
+func die():
+	print(\"computer ded\")
+	$Particles.modulate = Color(0.698039, 0.74902, 0.305882)
+	$Particles.emitting = true
+	$AnimatedSprite.visible = false
+	$Timer.start()
+
+
+func _on_Timer_timeout():
+	get_parent().computer_dead()
+	queue_free()
+"
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 8.13239, 10 )
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 2 ), ExtResource( 4 ), ExtResource( 3 ), ExtResource( 9 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "Sad",
+"speed": 5.0
+} ]
+
+[node name="Computer" type="RigidBody2D"]
+collision_layer = 3
+collision_mask = 3
+physics_material_override = SubResource( 1 )
+gravity_scale = 2.5
+script = SubResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0.295876, -3.5333 )
+scale = Vector2( 2, 2 )
+shape = SubResource( 3 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0.334087, 1.01345 )
+scale = Vector2( 2, 2 )
+frames = SubResource( 4 )
+animation = "Idle"
+frame = 1
+playing = true
+
+[node name="Particles" type="CPUParticles2D" parent="."]
+modulate = Color( 0.698039, 0.74902, 0.305882, 1 )
+emitting = false
+amount = 100
+one_shot = true
+explosiveness = 0.74
+randomness = 0.12
+emission_shape = 1
+emission_sphere_radius = 2.38
+spread = 180.0
+gravity = Vector2( 0, 0 )
+initial_velocity = 20.0
+initial_velocity_random = 0.12
+angular_velocity = 154.84
+angular_velocity_random = 0.48
+linear_accel = 25.81
+linear_accel_random = 0.09
+angle = 139.4
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

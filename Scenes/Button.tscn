@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets/button_red.png" type="Texture" id=1]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Area2D
+
+signal pressed
+signal not_pressed
+
+func _on_Area2D_body_entered(body):
+	if body is KinematicBody2D:
+		emit_signal(\"pressed\")
+		$Sprite.texture = load(\"res://Assets/button_green.png\")
+
+
+func _on_Area2D_body_exited(body):
+	if body is KinematicBody2D:
+		emit_signal(\"not_pressed\")
+		$Sprite.texture = load(\"res://Assets/button_red.png\")
+"
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 17, 4 )
+
+[node name="Area2D" type="Area2D"]
+script = SubResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 10 )
+shape = SubResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 2, 2 )
+texture = ExtResource( 1 )
+[connection signal="body_entered" from="." to="." method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_Area2D_body_exited"]
